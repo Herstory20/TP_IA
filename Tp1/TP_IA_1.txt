@@ -1,0 +1,28 @@
+1.2.a) initial_state([ [1, 2, 3, 4],       
+                [5, 6, 7, 8],       
+                [9, 10, 11, 12],
+                [13, 14, 15, vide] ]).
+
+b) L'élement d dans la colonne C de la ligne L.
+   Vérifie le P de la colonne 2 dans la ligne 3.
+
+c) initial_state(U0), coordonnees([L,C], U0, a),  
+final_state(F), coordonnees([L,C], F, a)). 
+
+d) initial_state(U0), rule(X,1,U0,U1).
+
+e) initial_state(U0), findall(X, rule(X,1,U0,U1),L).
+
+f) initial_state(U0), findall([A,S], rule(A,1,U0,S),L).
+
+
+2.1.a) initial_state(U0),final_state(F), 
+findall(Elt, (mal_place(Elt,U0,F),Elt\=vide), L).
+ taille : initial_state(U0),final_state(F), 
+findall(Elt, (mal_place(Elt,U0,F),Elt\=vide), L), length(L,T).
+
+2.2) initial_state(U0), dm(c,U0,D).
+initial_state(U0), heuristique1(U0, H). H = 4
+initial_state(U0), heuristique2(U0, H). H = 5
+
+3.2)  Situation S0: avec F0=H0+G0.

@@ -1,0 +1,13 @@
+1.2) Trouver le joueur initial pout la situation.
+     Place à la ligne 3 colonne 2 le o.
+
+2.2) A=[o,o,o], alignement_perdant(A,x) true
+     A=[o,o,o], alignement_perdant(A,o) false
+     A=[o,o,o], alignement_gagnant(A,o) true
+     A=[o,o,o], alignement_gagnant(A,x) false
+     A=[o,_,o], alignement_gagnant(A,o) false 
+
+2.) situation_initiale(S), heuristique(J,S,H). h=0
+
+
+3.2) Successors
