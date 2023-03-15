@@ -29,6 +29,11 @@ situation_initiale([ [_,_,_],
                      [_,_,_],
                      [_,_,_] ]).
 
+% une situation gagnante pour o pour les tests
+situation([ [o,_,a],
+			[o,b,_],
+			[o,_,_] ]).
+
 	% Convention (arbitraire) : c'est x qui commence
 
 joueur_initial(x).
@@ -212,7 +217,7 @@ heuristique(J,Situation,H) :-
 	findall(Ali, alignement_possible(J,Ali,Situation),ListAli),
 	length(ListAli,NbAliJ),
 	adversaire(J,Adv),
-	findall(Ali, alignement_possible(Adv,Ali,Situation),ListAli2),
+	findall(Alip, alignement_possible(Adv,Alip,Situation),ListAli2),
 	length(ListAli2,NbAliAdv),
 	H is (NbAliJ-NbAliAdv).
    
